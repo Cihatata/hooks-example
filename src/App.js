@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ShoppingApp from "./components/shoppingApp";
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import SaveProduct from "./components/saveProduct/SaveProduct";
+import Notification from "./commons/notifications/Notification";
+import {connect} from "react-redux";
 
-function App() {
+// conditinally rendering,
+// React-router-dom
+// redux
+// immutable
+// useState
+// functional components
+// Bem
+// flex
+
+
+function App(props) {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Notification
+        message={props.notificationMessage}
+      />
+
+      <BrowserRouter>
+        <Switch>
+          <Route exact path={'/'} component={ShoppingApp}/>
+          <Route exact path={'/save-product'} component={SaveProduct}/>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+
+function mapStateToProps(store) {
+  return {
+    notificationMessage: store.get('notificationMessage', ''),
+  }
+}
+
+export default connect(mapStateToProps)(App);

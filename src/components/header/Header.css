@@ -1,0 +1,18 @@
+.shopping-header {
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: turquoise;
+}
+
+.shopping-header button {
+    background-color: turquoise;
+}
+
+.shopping-header__right__one-elem {
+    margin: 0 6px;
+}
+

@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body, button, input, select {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+button {
+  border: none;
+  background-color: goldenrod;
+}
+
+button:hover {
+  background-color: darkgoldenrod;
+}
+
+button:active {
+  background-color: gold;
+}
+
+input {
+  width: 144px;
+  border: 1px solid black;
+  padding: 0 4px;
+}
+
