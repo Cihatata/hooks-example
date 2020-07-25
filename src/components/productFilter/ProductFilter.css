@@ -1,0 +1,14 @@
+.product-filter {
+    padding: 10px 20px;
+    height: calc(100vh - 82px);
+    background-color: lightblue;
+    border-right: 1px solid lightsteelblue;
+}
+
+.product-filter__price-range__inputs {
+    display: flex;
+    justify-content: space-between;
+}
+.product-filter__price-range__inputs input {
+    width: 65px;
+}

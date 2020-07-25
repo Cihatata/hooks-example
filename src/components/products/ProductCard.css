@@ -1,0 +1,16 @@
+.product-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid sienna;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.product-card-wrapper__top {
+    font-weight: bold;
+}
+
+.product-card-wrapper__bottom {
+    display: flex;
+    justify-content: space-around;
+}

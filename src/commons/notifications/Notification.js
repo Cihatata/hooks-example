@@ -1,17 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, memo } from 'react';
 import './Notification.css';
 
-export default function Notification(props) {
+function Notification(props) {
   const [ isActive, setIsActive ] = useState(false);
 
-  // componentDidMount
-  // componentDidUpdate
-  // componentWillUnmount
+  useEffect(() => {
+    setIsActive(true);
 
+    setTimeout(() => setIsActive(false), 3000);
+  }, [props.message.get('id', 0)])
 
-  return (
-    <div className="notification-wrapper">
-      { props.message.length && props.message }
-    </div>
-  )
+  if(isActive) {
+    return (
+      <div className="notification-wrapper">
+        { props.message.get('message', '') }
+      </div>
+    )
+  }
+
+  return null;
 }
+
+export default memo(Notification);

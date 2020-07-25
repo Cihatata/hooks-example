@@ -1,0 +1,6 @@
+.product-total {
+    height: calc(100vh - 62px);
+    background-color: cornsilk;
+    width: 120px;
+    min-width: 70px;
+}

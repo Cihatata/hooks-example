@@ -55,7 +55,7 @@ function SaveProduct(props) {
         <button
           onClick={() => {
             if (validate([productName, value, size])) {
-              props.addProduct({productName, value, size});
+              props.addProduct({productName, value, size, id: Math.random()});
               setProductName('');
               setValue('');
               setSize('s');

@@ -1,0 +1,9 @@
+.shopping-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-app__body {
+    display: flex;
+    justify-content: space-between;
+}

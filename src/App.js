@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import ShoppingApp from "./components/shoppingApp";
+import ShoppingApp from "./components/ShoppingApp";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SaveProduct from "./components/saveProduct/SaveProduct";
 import Notification from "./commons/notifications/Notification";
 import {connect} from "react-redux";
+import I from 'immutable';
 
 // conditinally rendering,
 // React-router-dom
@@ -39,7 +40,7 @@ function App(props) {
 
 function mapStateToProps(store) {
   return {
-    notificationMessage: store.get('notificationMessage', ''),
+    notificationMessage: store.get('notificationMessage', I.Map()),
   }
 }
 
